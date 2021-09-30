@@ -1,22 +1,19 @@
 ﻿using System;
-public class Ecercise5
+
+namespace Circle_Program
 {
-    public static void Main(string[] args)
+    class Circle
     {
-        int n, i, m = 0, flag = 0;
-        Console.Write("Enter the Number ");
-        n = int.Parse(Console.ReadLine());
-        m = n / 2;
-        for (i = 2; i <= m; i++)
+        static void Main(string[] args)
         {
-            if (n % i == 0)
-            {
-                Console.Write("False");
-                flag = 1;
-                break;
-            }
+            double radius, area;
+            Console.WriteLine("Enter the radius");
+            radius = Convert.ToDouble(Console.ReadLine());
+
+           area = Math.PI * radius *radius; 
+
+            Console.WriteLine("Area{0} is {1}",radius,area);
+            
         }
-        if (flag == 0)
-            Console.Write("True");
     }
 }
